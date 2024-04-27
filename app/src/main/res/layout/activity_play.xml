@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_default_color_primary"
+        android:id="@+id/mainTb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextColor="@color/design_default_color_on_primary"
+        app:subtitleTextColor="@color/design_default_color_on_primary"/>
+
+    <TextView
+        android:id="@+id/txtCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100sp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Escolha um elemento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbPedra"
+        android:layout_width="128dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/granite" />
+
+    <ImageButton
+        android:id="@+id/imbTesoura"
+        android:layout_width="128dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/scissors" />
+
+    <ImageButton
+        android:id="@+id/imbPapel"
+        android:layout_width="128dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imbTesoura"
+        app:layout_constraintStart_toEndOf="@+id/imbPedra"
+        app:srcCompat="@drawable/paper" />
+
+    <LinearLayout
+        android:id="@+id/layoutPlayer2"
+        android:layout_width="90dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player2"
+            app:layout_constraintBottom_toTopOf="@+id/layoutPlayer2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgPedraPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/granite" />
+
+        <ImageButton
+            android:id="@+id/imgPapelPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/paper" />
+
+        <ImageButton
+            android:id="@+id/imgTesouraPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/scissors" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPlayer3"
+        android:layout_width="90dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/player3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player3"
+            app:layout_constraintBottom_toTopOf="@+id/layoutPlayer2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgPedraPlayer3"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/granite" />
+
+        <ImageButton
+            android:id="@+id/imgPapelPlayer3"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/paper" />
+
+        <ImageButton
+            android:id="@+id/imgTesouraPlayer3"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/scissors" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Você"
+        app:layout_constraintBottom_toTopOf="@+id/imbPapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -111,17 +111,19 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/scissors" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imgLagartoPlayer2"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/lizard" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imgSpockPlayer2"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/spock" />
 
@@ -173,17 +175,19 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/scissors" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imgLagartoPlayer3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/lizard" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imgSpockPlayer3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/spock" />
     </LinearLayout>
@@ -198,9 +202,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imbLagarto"
         android:layout_width="80dp"
+        android:background="#00FFFFFF"
         android:layout_height="80dp"
         android:layout_marginBottom="24dp"
         android:scaleType="fitCenter"
@@ -208,8 +213,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/lizard" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imbSpock"
+        android:background="#00FFFFFF"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="24dp"

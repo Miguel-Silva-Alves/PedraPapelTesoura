@@ -76,12 +76,10 @@ class PlayActivity : AppCompatActivity() {
             // Two Players
             if(humanChoice == robot1Choice){
                 result = "Empate"
-            }else if((humanChoice == "Pedra" && robot1Choice == "Tesoura") || (humanChoice == "Papel" && robot1Choice == "Pedra")) {
+            }else if((humanChoice == "Pedra" && robot1Choice == "Tesoura") || (humanChoice == "Papel" && robot1Choice == "Pedra") || (humanChoice == "Tesoura" && robot1Choice == "Papel")) {
 
                 result = "Você ganhou"
 
-            }else if((robot1Choice == "Pedra" && humanChoice == "Tesoura") || (robot1Choice == "Papel" && humanChoice == "Pedra")){
-                result = "Você ganhou"
             }else{
                 result = "Você perdeu"
             }

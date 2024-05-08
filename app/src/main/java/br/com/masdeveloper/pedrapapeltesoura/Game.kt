@@ -5,23 +5,36 @@ fun jokenpo(lista: List<String>): String {
     if (lista[0] == lista[1] && lista[1] == lista[2]) {
         return "Empate"  // Empate
     }
-    else if (lista[0] != lista[1] && lista[1] != lista[2] && lista[2] != lista[0]){
-        return "Empate"
-    }
-    if(lista.contains("papel") && lista.contains("tesoura")){
-        if(lista.count { it == "tesoura" } == 2 && lista.indexOf("tesoura") == 0) return "Empate"
-        if (lista.indexOf("tesoura") == 0) return "Você ganhou" else return "Você perdeu"
-    }else{
 
+    if(lista[0] == "pedra"){
+        if(lista.count { it == "pedra" } == 2 && (lista.contains("spock") || lista.contains("papel"))) return "Você perdeu"
+        if(lista.count { it == "spock" } == 2 || lista.count { it == "papel" } == 2 || (lista.contains("spock") && lista.contains("papel"))) return "Você perdeu"
+        if(lista.count { it == "tesoura" } == 2 || lista.count { it == "lagarto" } == 2 || (lista.contains("tesoura") && lista.contains("lagarto"))) return "Você ganhou"
     }
-    if(lista.contains("pedra") && lista.contains("papel")){
-        if(lista.count { it == "papel" } == 2 && lista.indexOf("papel") == 0) return "Empate"
-        if (lista.indexOf("papel") == 0) return "Você ganhou" else return "Você perdeu"
-    }
-    if(lista.contains("tesoura") && lista.contains("pedra")){
-        if(lista.count { it == "pedra" } == 2 && lista.indexOf("pedra") == 0) return "Empate"
-        if (lista.indexOf("pedra") == 0) return "Você ganhou" else return "Você perdeu"
-    }
-    return "Não foi possível definir um vencedor"
 
+    if(lista[0] == "papel"){
+        if(lista.count { it == "papel" } == 2 && (lista.contains("tesoura") || lista.contains("lagarto"))) return "Você perdeu"
+        if(lista.count { it == "tesoura" } == 2 || lista.count { it == "lagarto" } == 2 || (lista.contains("tesoura") && lista.contains("lagarto"))) return "Você perdeu"
+        if(lista.count { it == "pedra" } == 2 || lista.count { it == "spock" } == 2 || (lista.contains("pedra") && lista.contains("spock"))) return "Você ganhou"
+    }
+
+    if(lista[0] == "tesoura"){
+        if(lista.count { it == "tesoura" } == 2 && (lista.contains("pedra") || lista.contains("spock"))) return "Você perdeu"
+        if(lista.count { it == "pedra" } == 2 || lista.count { it == "spock" } == 2 || (lista.contains("pedra") && lista.contains("spock"))) return "Você perdeu"
+        if(lista.count { it == "papel" } == 2 || lista.count { it == "lagarto" } == 2 || (lista.contains("papel") && lista.contains("lagarto"))) return "Você ganhou"
+    }
+
+    if(lista[0] == "lagarto"){
+        if(lista.count { it == "lagarto" } == 2 && (lista.contains("tesoura") || lista.contains("pedra"))) return "Você perdeu"
+        if(lista.count { it == "tesoura" } == 2 || lista.count { it == "pedra" } == 2 || (lista.contains("tesoura") && lista.contains("pedra"))) return "Você perdeu"
+        if(lista.count { it == "papel" } == 2 || lista.count { it == "spock" } == 2 || (lista.contains("papel") && lista.contains("spock"))) return "Você ganhou"
+    }
+
+    if(lista[0] == "spock"){
+        if(lista.count { it == "spock" } == 2 && (lista.contains("papel") || lista.contains("lagarto"))) return "Você perdeu"
+        if(lista.count { it == "papel" } == 2 || lista.count { it == "lagarto" } == 2 || (lista.contains("papel") && lista.contains("lagarto"))) return "Você perdeu"
+        if(lista.count { it == "pedra" } == 2 || lista.count { it == "tesoura" } == 2 || (lista.contains("pedra") && lista.contains("tesoura"))) return "Você ganhou"
+    }
+    return "Empate"
 }
+

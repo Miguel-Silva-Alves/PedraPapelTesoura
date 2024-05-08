@@ -50,6 +50,14 @@ class PlayActivity : AppCompatActivity() {
             game("imgTesoura", mode)
         }
 
+        apb.imbSpock.setOnClickListener{
+            game("imgSpock", mode)
+        }
+
+        apb.imbLagarto.setOnClickListener{
+            game("imgLagarto", mode)
+        }
+
     }
 
     // Layout Function to mark some choice
@@ -76,7 +84,11 @@ class PlayActivity : AppCompatActivity() {
             // Two Players
             if(humanChoice == robot1Choice){
                 result = "Empate"
-            }else if((humanChoice == "Pedra" && robot1Choice == "Tesoura") || (humanChoice == "Papel" && robot1Choice == "Pedra") || (humanChoice == "Tesoura" && robot1Choice == "Papel")) {
+            }else if((humanChoice == "Pedra" && (robot1Choice == "Tesoura" || robot1Choice == "Lagarto")) ||
+                (humanChoice == "Papel" && (robot1Choice == "Pedra" || robot1Choice == "Spock")) ||
+                (humanChoice == "Tesoura" && (robot1Choice == "Papel" || robot1Choice == "Lagarto")) ||
+                (humanChoice == "Lagarto" && (robot1Choice == "Papel" || robot1Choice == "Snock")) ||
+                (humanChoice == "Spock" && (robot1Choice == "Pedra" || robot1Choice == "Tesoura"))) {
 
                 result = "Você ganhou"
 
@@ -138,7 +150,7 @@ class PlayActivity : AppCompatActivity() {
     }
 
     fun generateChoiceofPlayerRobot(player: String): String {
-        val lista = listOf("imgPedraPlayer", "imgPapelPlayer", "imgTesouraPlayer")
+        val lista = listOf("imgPedraPlayer", "imgPapelPlayer", "imgTesouraPlayer", "imgLagartoPlayer", "imgSpockPlayer")
         val elementoAleatorio = lista.random()
         println("O elemento escolhido aleatoriamente é: $elementoAleatorio")
         return elementoAleatorio + player

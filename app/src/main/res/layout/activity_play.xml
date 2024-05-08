@@ -33,9 +33,8 @@
 
     <ImageButton
         android:id="@+id/imbPedra"
-        android:layout_width="128dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
@@ -45,26 +44,24 @@
 
     <ImageButton
         android:id="@+id/imbTesoura"
-        android:layout_width="128dp"
-        android:layout_height="98dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imbPapel"
         app:srcCompat="@drawable/scissors" />
 
     <ImageButton
         android:id="@+id/imbPapel"
-        android:layout_width="128dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="3dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imbTesoura"
         app:layout_constraintStart_toEndOf="@+id/imbPedra"
         app:srcCompat="@drawable/paper" />
 
@@ -90,7 +87,7 @@
         <ImageButton
             android:id="@+id/imgPedraPlayer2"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
@@ -99,7 +96,7 @@
         <ImageButton
             android:id="@+id/imgPapelPlayer2"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
@@ -108,11 +105,26 @@
         <ImageButton
             android:id="@+id/imgTesouraPlayer2"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/scissors" />
+
+        <ImageView
+            android:id="@+id/imgLagartoPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lizard" />
+
+        <ImageView
+            android:id="@+id/imgSpockPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/spock" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -137,7 +149,7 @@
         <ImageButton
             android:id="@+id/imgPedraPlayer3"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
@@ -146,7 +158,7 @@
         <ImageButton
             android:id="@+id/imgPapelPlayer3"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
@@ -155,11 +167,25 @@
         <ImageButton
             android:id="@+id/imgTesouraPlayer3"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/scissors" />
+
+        <ImageView
+            android:id="@+id/imgLagartoPlayer3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lizard" />
+
+        <ImageView
+            android:id="@+id/imgSpockPlayer3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/spock" />
     </LinearLayout>
 
     <TextView
@@ -171,6 +197,26 @@
         app:layout_constraintBottom_toTopOf="@+id/imbPapel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imbLagarto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/lizard" />
+
+    <ImageView
+        android:id="@+id/imbSpock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imbLagarto"
+        app:srcCompat="@drawable/spock" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
